@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CM</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+	div.title {
+		width: 100%;
+		height:73.5px;
+		background-color: #8B4513;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	img.back{
+		height: 30px;
+		width: 30px;
+
+	}
+
+	p.title{
+		text-align: center;
+		font-family: Comic Sans MS;
+		font-size: 50px;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	div.order_m{
+		background-color: #FFE4C4;
+	}
+
+	div.coffee_info{
+		height: 588px;
+	}
+
+	img.coffee_image{
+		position: relative;
+		top: 144px;
+		left: 144px;
+
+		width: 300px;
+		height:300px;
+		border:0;
+	}
+
+	p.coffee_name{
+
+		width: 300px;
+
+		position: relative;
+		top: 144px;
+		left:144px;
+
+		font-family: Comic Sans MS;
+		font-size:40px;
+		text-align: center;
+	}
+
+	div.sweetness{
+
+    	display: inline-block;
+
+    	height: 33px;
+
+    	text-align: center;
+    	font-size: 22px;
+		box-shadow: 2px 2px 5px #C2C2C2;
+
+		font-family: Comic Sans MS;
+
+	}
+
+	div.wrap{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	div.temp{
+
+    	height: 33px;
+
+    	text-align: center;
+    	font-size: 22px;
+		box-shadow: 2px 2px 5px #C2C2C2;
+
+		font-family: Comic Sans MS;
+
+	}
+
+	div.sweetness :hover {
+    		background-color: #111111;
+		}
+
+	div.temp :hover {
+    		background-color: #111111;
+		}
+
+	ul{
+		height: 73.5px;
+    	list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+    	overflow: hidden;
+   		background-color: #333333;
+	}
+
+	li {
+		width: 384px;
+   		float: right;
+   		font-family: Comic Sans MS;
+	}
+
+	li a {
+		font-size: 40px;
+		height: 73.5px;
+		width: 200px;
+   		display: block;
+   		color: white;
+   		text-align: center;
+   		padding: 16px;
+   		text-decoration: none;
+	}
+
+	li a:hover {
+   		background-color: #111111;
+	}
+
+	.black_overlay{ 
+       	display: none; 
+   	    position: absolute; 
+   	   	top: 0%; 
+       	left: 0%; 
+  	  	width: 100%; 
+  	    height: 100%; 
+        background-color: black; 
+        z-index:1001; 
+        -moz-opacity: 0.8; 
+        opacity:.80; 
+        filter: alpha(opacity=88); 
+    } 
+       
+    .white_content { 
+        display: none; 
+        position: absolute; 
+        top: 25%; 
+        left: 25%; 
+        width: 55%; 
+        height: 55%; 
+        padding: 20px; 
+        border: 10px solid orange; 
+        background-color: white; 
+        z-index:1002; 
+        overflow: auto; 
+    } 
+
+	</style>
+</head>
+<body>
+	<div height ="768px">
+
+		<div class="title">
+			<p class="title">NingCafe</p>
+		</div>
+
+		<div class="order_m">
+			<table calss="order_m" width="100%" border="0">
+			
+				<tr>	
+					<td style="width:50%;">
+						<div class="coffee_info">
+						<img class="coffee_image" src="cafe-1.jpg" alt="CM">
+						<p class="coffee_name">CM</p>
+					</div></td>
+
+					<td style="width:50%;">
+						<div class="wrap">
+							<div class="sweetness">Less Sweet</div>
+							<div class="sweetness">Normel Sweet</div>
+							<div class="sweetness">Very Sweet</div>
+						</div><br>
+
+						<div class="wrap">
+							<div class="temp">Iced</div>
+							<div class="temp">Hot</div>
+							<div class="temp">Very Hot</div>
+						</div>
+					</td>
+
+				</tr></table>
+			</div>
+
+			<div class="status">
+				<ul>
+  					<li><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Finish</a></li>
+
+  						<div id="light" class="white_content">Your order is finished! Thanks. 
+        					<a href = "orderpage.html" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Go back to manu</a>
+        				</div>
+
+        				<div id="fade" class="black_overlay"></div>
+
+					<li><a href="javascript:history.go(-1)"><img class="back" src="back.png"></a></li>
+				</ul>
+			</div>
+
+	</div>
+</body>
+</html>
